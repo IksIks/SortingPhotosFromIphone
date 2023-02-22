@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" mc:Ignorable="d"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SortingPhotosFromIphone"
+        xmlns:icons="http://schemas.fontawesome.com/icons/"
         Title="MainWindow" Height="450" Width="800">
     <DockPanel>
         <Menu DockPanel.Dock="Top">
@@ -16,8 +17,18 @@
             </StatusBarItem>
         </StatusBar>
         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,3">
-            <Button Content="Сортировать"/>
-            <Button Content="Сортировать в..."/>
+            <Button Margin="3">
+                <StackPanel Orientation="Horizontal">
+                    <icons:ImageAwesome Width="12" Icon="Solid_Sort" Margin="3,0"/>
+                    <Label Content="Сортировать"/>
+                </StackPanel>
+            </Button>
+            <Button Margin="3">
+                <StackPanel Orientation="Horizontal">
+                    <icons:ImageAwesome Width="12" Icon="Solid_Sort" Margin="3,0"/>
+                    <Label Content="Сортировать в ...."/>
+                </StackPanel>
+            </Button>
         </StackPanel>
         <Grid Margin="0,3">
             
