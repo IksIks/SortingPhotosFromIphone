@@ -1,0 +1,26 @@
+﻿<Window x:Class="SortingPhotosFromIphone.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" mc:Ignorable="d"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SortingPhotosFromIphone"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Меню"/>
+            <MenuItem Header="Пока не знаю"/>
+        </Menu>
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem>
+                <TextBlock Text="Привяязка к колическтву файлов"/>
+            </StatusBarItem>
+        </StatusBar>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="33*"/>
+                <ColumnDefinition Width="127*"/>
+            </Grid.ColumnDefinitions>
+
+        </Grid>
+    </DockPanel>
+</Window>
