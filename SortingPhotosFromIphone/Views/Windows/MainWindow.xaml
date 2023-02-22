@@ -15,12 +15,12 @@
                 <TextBlock Text="Привяязка к колическтву файлов"/>
             </StatusBarItem>
         </StatusBar>
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="33*"/>
-                <ColumnDefinition Width="127*"/>
-            </Grid.ColumnDefinitions>
-
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,3">
+            <Button Content="Сортировать"/>
+            <Button Content="Сортировать в..."/>
+        </StackPanel>
+        <Grid Margin="0,3">
+            
         </Grid>
     </DockPanel>
 </Window>
