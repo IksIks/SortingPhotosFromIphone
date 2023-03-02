@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:SortingPhotosFromIphone"
         xmlns:icons="http://schemas.fontawesome.com/icons/"
         xmlns:vm="clr-namespace:SortingPhotosFromIphone.ViewModels"
-        xmlns:t="clr-namespace:SortingPhotosFromIphone.Models"
+        xmlns:dir="clr-namespace:SortingPhotosFromIphone.Models"
         Title="MainWindow" Height="450" Width="800">
     <Window.DataContext>
         <vm:MainWindowViewModel/>
@@ -42,14 +42,14 @@
             </Grid.ColumnDefinitions>
             <GroupBox Header="Файлы">
                 <GroupBox.Resources>
-                    <HierarchicalDataTemplate DataType="{x:Type t:DirectoryTest}" ItemsSource="{Binding Directorys}">
+                    <HierarchicalDataTemplate DataType="{x:Type dir:Directory}" ItemsSource="{Binding SubDirectorys}">
                         <StackPanel Orientation="Horizontal">
                             <icons:ImageAwesome Height="12" Icon="Regular_Folder" Foreground="Yellow" Margin="-3,0,2,0"/>
                             <TextBlock Text="{Binding Name}"/>
                         </StackPanel>
                     </HierarchicalDataTemplate>
                 </GroupBox.Resources>
-                <TreeView ItemsSource="{Binding directoryInfo.Directorys}">
+                <TreeView ItemsSource="{Binding directoryInfo.SubDirectorys}">
                     
                 </TreeView>
             </GroupBox>
