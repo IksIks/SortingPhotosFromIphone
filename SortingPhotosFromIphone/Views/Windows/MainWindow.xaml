@@ -40,7 +40,10 @@
                 <ColumnDefinition Width="57*"/>
                 <ColumnDefinition Width="103*"/>
             </Grid.ColumnDefinitions>
-            <GroupBox Header="Файлы">
+            <GroupBox Header="Папки" Grid.Column="0">
+                <GroupBox.DataContext>
+                    <vm:FileSystemViewModel/>
+                </GroupBox.DataContext>
                 <GroupBox.Resources>
                     <HierarchicalDataTemplate DataType="{x:Type dir:Directory}" ItemsSource="{Binding SubDirectorys}">
                         <StackPanel Orientation="Horizontal">
@@ -50,7 +53,21 @@
                     </HierarchicalDataTemplate>
                 </GroupBox.Resources>
                 <TreeView ItemsSource="{Binding directoryInfo.SubDirectorys}">
-                    
+                </TreeView>
+            </GroupBox>
+            <GroupBox Header="Файлы" Grid.Column="1">
+                <GroupBox.DataContext>
+                    <vm:FileSystemViewModel/>
+                </GroupBox.DataContext>
+                <GroupBox.Resources>
+                    <HierarchicalDataTemplate DataType="{x:Type dir:File}" ItemsSource="{Binding Files}">
+                        <StackPanel Orientation="Horizontal">
+                            <icons:ImageAwesome Height="12" Icon="Regular_File" Foreground="Gray" Margin="-3,0,2,0"/>
+                            <TextBlock Text="{Binding Name}"/>
+                        </StackPanel>
+                    </HierarchicalDataTemplate>
+                </GroupBox.Resources>
+                <TreeView ItemsSource="{Binding file}">
                 </TreeView>
             </GroupBox>
         </Grid>

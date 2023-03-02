@@ -14,13 +14,13 @@ namespace SortingPhotosFromIphone.Models
         public DateTime CreationTime => dirInfo.CreationTime;
 
         public IEnumerable<Directory> SubDirectorys => dirInfo.EnumerateDirectories().Select(dir => new Directory(dir.FullName));
+        public IEnumerable<File> Files => dirInfo.EnumerateFiles().Select(file => new File(file.FullName));
 
         private readonly DirectoryInfo dirInfo;
         public Directory(string path)
         {
             dirInfo = new DirectoryInfo(path);
         }
-
 
 
     }

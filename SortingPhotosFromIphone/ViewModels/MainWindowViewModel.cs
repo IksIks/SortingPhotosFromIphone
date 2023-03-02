@@ -13,8 +13,6 @@ namespace SortingPhotosFromIphone.ViewModels
         // конструктор
         // методы
 
-        public Models.Directory directoryInfo { get; } = new Models.Directory("C:\\");
-        
 
         public MainWindowViewModel()
         {

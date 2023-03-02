@@ -13,7 +13,6 @@ namespace SortingPhotosFromIphone.Models
         public string Path => fileInfo.FullName;
         public DateTime CreationTime => fileInfo.CreationTime;
 
-        //public IEnumerable<File> Files => fileInfo.EnumerateFiles()
         private readonly FileInfo fileInfo;
         public File(string path)
         {
